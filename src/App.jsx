@@ -17,6 +17,7 @@ function App() {
         );
         const data = await res.json();
         setJoke(data.joke);
+        setLoading(false); // Forgot this line, this broke test
       } catch (e) {
         console.error("Error", e);
       }
